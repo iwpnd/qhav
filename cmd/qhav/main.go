@@ -47,7 +47,7 @@ func init() {
 	unitFlag = cli.StringFlag{
 		Name:  "unit",
 		Value: "km",
-		Usage: "distance unit",
+		Usage: "distance unit (m, km, miles).",
 	}
 }
 
