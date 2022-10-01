@@ -12,18 +12,21 @@ const conversionToMiles = 0.621371192
 
 type Unit func() float64
 
+// InKilometers to return distance in kilometers
 func InKilometers() Unit {
 	return func() float64 {
-		return earthRadiusKm
+		return earthRadiusKm * conversionToKM
 	}
 }
 
+// InMeters to return distance in meters
 func InMeters() Unit {
 	return func() float64 {
 		return earthRadiusKm * conversionToMeters
 	}
 }
 
+// InMiles to return distance in miles
 func InMiles() Unit {
 	return func() float64 {
 		return earthRadiusKm * conversionToMiles
@@ -40,6 +43,7 @@ func degreeToRad(p []float64) []float64 {
 	return points
 }
 
+// Haversine to calculate haversine distance between to points
 func Haversine(p1, p2 []float64, unit ...Unit) float64 {
 	radius := earthRadiusKm
 
