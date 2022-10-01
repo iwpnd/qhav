@@ -10,7 +10,7 @@ quick haversine distance between to WGS84 points
 go install github.com/iwpnd/pw/cmd/qhav@latest
 ```
 
-````bash
+```bash
 ➜ qhav --help
 NAME:
    qhav - calculate the haversine distance in a given unit between to two points
@@ -25,15 +25,16 @@ GLOBAL OPTIONS:
    --from value [ --from value ]  from point. --from 0.5,0.5
    --help, -h                     show help (default: false)
    --to value [ --to value ]      to point. --to 0.0,0.0
-   --unit value                   distance unit (m, km, miles). (default: "km")```
+   --unit value                   distance unit (m, km, miles). (default: "km")
+```
 
 ### package
 
-````
+```
 
 go get -u github.com/iwpnd/qhav
 
-````
+```
 
 ## Usage
 
@@ -57,7 +58,7 @@ func main() {
 }
 
 >> 78.63
-````
+```
 
 ## License
 
