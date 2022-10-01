@@ -70,4 +70,4 @@ MIT
 
 Benjamin Ramser - [@iwpnd](https://github.com/iwpnd)
 
-Project Link: [https://github.com/iwpnd/pw](https://github.com/iwpnd/qhav)
+Project Link: [https://github.com/iwpnd/qhav](https://github.com/iwpnd/qhav)
