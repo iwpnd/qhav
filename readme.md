@@ -1,13 +1,13 @@
 # qhav - quick haversine
 
-quick haversine distance between to WGS84 points
+quick haversine distance between to points
 
 ## Installation
 
 ### cli
 
 ```
-go install github.com/iwpnd/pw/cmd/qhav@latest
+go install github.com/iwpnd/qhav/cmd/qhav@latest
 ```
 
 ```bash
