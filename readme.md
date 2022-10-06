@@ -10,7 +10,18 @@ quick haversine distance between to points
 go install github.com/iwpnd/qhav/cmd/qhav@latest
 ```
 
+### package
+
+```
+go get -u github.com/iwpnd/qhav
+```
+
+## Usage
+
 ```bash
+➜ qhav --from 13.37,52.25 --to 13.37,52.26 --unit m
+>> 1111.9508023352598
+
 ➜ qhav --help
 NAME:
    qhav - calculate the haversine distance in a given unit between to two points
@@ -27,16 +38,6 @@ GLOBAL OPTIONS:
    --to value [ --to value ]      to point. --to 0.0,0.0
    --unit value                   distance unit (m, km, miles). (default: "km")
 ```
-
-### package
-
-```
-
-go get -u github.com/iwpnd/qhav
-
-```
-
-## Usage
 
 ```go
 package main
