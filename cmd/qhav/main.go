@@ -10,21 +10,19 @@ import (
 )
 
 func calc(ctx *cli.Context) error {
-	var unit = qhav.InKilometers()
+	unit_option := qhav.InKilometers()
+	unit_string := ctx.String("unit")
 
-	if ctx.String("unit") != "" {
-		u := ctx.String("unit")
-		switch u {
-		case "km":
-			unit = qhav.InKilometers()
-		case "m":
-			unit = qhav.InMeters()
-		case "miles":
-			unit = qhav.InMiles()
-		}
+	switch unit_string {
+	case "km":
+		unit_option = qhav.InKilometers()
+	case "m":
+		unit_option = qhav.InMeters()
+	case "miles":
+		unit_option = qhav.InMiles()
 	}
 
-	fmt.Println(qhav.Haversine(ctx.Float64Slice("from"), ctx.Float64Slice("to"), unit))
+	fmt.Println(qhav.Haversine(ctx.Float64Slice("from"), ctx.Float64Slice("to"), unit_option), unit_string)
 	return nil
 }
 
@@ -47,14 +45,14 @@ func init() {
 	unitFlag = cli.StringFlag{
 		Name:  "unit",
 		Value: "km",
-		Usage: "distance unit (m, km, miles).",
+		Usage: "distance unit_option (m, km, miles).",
 	}
 }
 
 func main() {
 	app := &cli.App{
 		Name:   "qhav",
-		Usage:  "calculate the haversine distance in a given unit between to two points",
+		Usage:  "calculate the haversine distance in a given unit_option between to two points",
 		Action: calc,
 		Flags: []cli.Flag{
 			&unitFlag,
