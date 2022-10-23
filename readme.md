@@ -20,7 +20,7 @@ go get -u github.com/iwpnd/qhav
 
 ```bash
 ➜ qhav --from 13.37,52.25 --to 13.37,52.26 --unit m
->> 1111.9508023352598
+>> 1111.9508023352598 m
 
 ➜ qhav --help
 NAME:
